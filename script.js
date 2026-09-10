@@ -102,3 +102,22 @@ function showQuestion() {
     document.getElementById('answer_3').innerHTML = question['answer_3'];
     document.getElementById('answer_4').innerHTML = question['answer_4'];
 }
+
+function answer(selection) {
+    let question = questions[currentQuestion];      // variable: question = 0
+    console.log('Selected answer is ', selection)
+
+    let selectedQuestionNumber = selection.slice(-1)        // ich speichere in der Variable die letzte Buchstabe
+    console.log('You choose the answer with the last string:', selectedQuestionNumber);
+    console.log('The right answer is', question['right_answer']);
+
+    if (selectedQuestionNumber == question['right_answer']) {
+        console.log('Deine Antwort ist richtig!');
+    } else {
+        console.log('Versuche es noch einmal');
+    }
+
+
+
+
+}
