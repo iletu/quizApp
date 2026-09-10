@@ -1,0 +1,11 @@
+body {
+    background-color: #c7b1e8 !important;
+}
+
+.container-card {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
