@@ -113,11 +113,10 @@ function answer(selection) {
 
     if (selectedQuestionNumber == question['right_answer']) {
         console.log('Deine Antwort ist richtig!');
+        document.getElementById(selection).parentNode.classList.add('bg-success');
     } else {
-        console.log('Versuche es noch einmal');
+        console.log('Versuche es noch einmal!');
+        document.getElementById(selection).parentNode.classList.add('bg-danger');
+
     }
-
-
-
-
 }

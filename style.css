@@ -27,3 +27,8 @@ body {
     cursor: pointer;
     background-color: #ffcde8;
 }
+
+.bg-success,
+.bg-danger {
+    color: white;
+}
