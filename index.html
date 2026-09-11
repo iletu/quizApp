@@ -35,11 +35,16 @@
         </nav>
     </header>
 
-    <main class="quiz-card">
+    <main class="card quiz-card">
 
         <div class="card">
             <img src="./assets/img/questionmark.jpg" class="card-img-top" alt="questionmark">
-            <div class="card-body">
+
+            <div class="card-body" id="endScreen" style="display: none;">
+                Quiz beendet!
+            </div>
+
+            <div class="card-body" id="questionBody">
                 <h5 class="card-title" id="questiontext">Frage</h5>
 
                 <div class="card quiz-answer-card mb-2" onclick=" answer('answer_1')">
@@ -67,7 +72,7 @@
                 </div>
 
                 <div class="question-footer">
-                    <span> <b>1</b> von <b id="all-questions">5</b> Fragen</span>
+                    <span> <b id="question-number">1</b> von <b id="all-questions">5</b> Fragen</span>
                     <button onclick="nextQuestion()" class="btn btn-primary" id="next-button" disabled>Nächste
                         Frage</button>
                 </div>
