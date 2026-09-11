@@ -111,12 +111,34 @@ function answer(selection) {
     console.log('You choose the answer with the last string:', selectedQuestionNumber);
     console.log('The right answer is', question['right_answer']);
 
+    let idOfRightAnswer = `answer_${question['right_answer']}`;
+
     if (selectedQuestionNumber == question['right_answer']) {
         console.log('Deine Antwort ist richtig!');
         document.getElementById(selection).parentNode.classList.add('bg-success');
     } else {
         console.log('Versuche es noch einmal!');
         document.getElementById(selection).parentNode.classList.add('bg-danger');
-
+        document.getElementById(idOfRightAnswer).parentNode.classList.add('bg-success');
     }
+
+    document.getElementById('next-button').disabled = false;
+}
+
+function nextQuestion() {
+    currentQuestion++;     // z.B. von 0 auf 1
+    document.getElementById('next-button').disabled = true;
+    resetAnswerButtons();
+    showQuestion();
+}
+
+function resetAnswerButtons() {
+    document.getElementById('answer_1').parentNode.classList.remove('bg-danger');
+    document.getElementById('answer_1').parentNode.classList.remove('bg-success');
+    document.getElementById('answer_2').parentNode.classList.remove('bg-danger');
+    document.getElementById('answer_2').parentNode.classList.remove('bg-success');
+    document.getElementById('answer_3').parentNode.classList.remove('bg-danger');
+    document.getElementById('answer_3').parentNode.classList.remove('bg-success');
+    document.getElementById('answer_4').parentNode.classList.remove('bg-danger');
+    document.getElementById('answer_4').parentNode.classList.remove('bg-success');
 }
