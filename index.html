@@ -37,11 +37,18 @@
 
     <main class="card quiz-card">
 
-        <div class="card">
+        <div class="card card-body">
             <img src="./assets/img/questionmark.jpg" class="card-img-top" alt="questionmark">
 
-            <div class="card-body" id="endScreen" style="display: none;">
-                Quiz beendet!
+            <div class="card card-body" id="endScreen" style="display: none;">
+                <div class="text-center"> Quiz beendet!</div>
+                <div> <img class="width-100" src="./assets/img/trophy.jpg" class="card-img-top" alt="questionmark">
+                </div>
+                <div class="text-center">
+                    Du hast <b id="amount-of-right-questions">XXX</b> Fragen von <b id="amount-of-questions">XXX</b>
+                    richtig beantwortet.
+                </div>
+
             </div>
 
             <div class="card-body" id="questionBody">

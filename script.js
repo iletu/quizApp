@@ -83,6 +83,7 @@ let questions = [
 
 
 let currentQuestion = 0;
+let rightQuestions = 0;
 
 
 function init() {
@@ -98,6 +99,9 @@ function showQuestion() {
     if (currentQuestion >= questions.length) {           // show end screen
         document.getElementById('endScreen').style = '';
         document.getElementById('questionBody').style = 'display:none';
+
+        document.getElementById('amount-of-questions').innerHTML = questions.length;
+        document.getElementById('amount-of-right-questions').innerHTML = rightQuestions;
 
     } else {
 
@@ -124,6 +128,7 @@ function answer(selection) {
     if (selectedQuestionNumber == question['right_answer']) {
         console.log('Deine Antwort ist richtig!');
         document.getElementById(selection).parentNode.classList.add('bg-success');
+        rightQuestions++;
     } else {
         console.log('Versuche es noch einmal!');
         document.getElementById(selection).parentNode.classList.add('bg-danger');

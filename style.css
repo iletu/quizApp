@@ -8,11 +8,7 @@ body {
 
     width: 30rem;
     margin: 40px auto;
-
-
 }
-
-
 
 .question-footer {
     border-top: 1px solid rgb(0, 0, 0, 4);
@@ -31,4 +27,12 @@ body {
 .bg-success,
 .bg-danger {
     color: white;
+}
+
+.width-100 {
+    width: 100%;
+}
+
+.text-center {
+    text-align: center;
 }
